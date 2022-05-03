@@ -5,6 +5,14 @@ let extraTips = [
   "Save money buy not eating!",
   "Don't let your partner know...",
 ];
+
+//Task 1
+function handleClick() {
+  console.log("Im just to prove it's working!");
+  pennies = pennies * 2;
+  output.innerText = (`${pennies} pennies`)
+}
+
 //Task 2
 const quote = document.querySelector(".quote");
 quote.innerText = "This is a funny quote, honest!"
@@ -23,19 +31,18 @@ for (i = 0; i < extraTips.length; i++) {
   ul.appendChild(newLi);
 }
 
-/*
-//Task 5
-document.title = "Pennies From Heaven"
+/*Task 5
+document.title = "Pennies From Heaven"; 
 */
 
 //Task 6
 function changePageTitle() {
   document.title = "Pennies From Heaven";
 }
-
-//Task 1
-function handleClick() {
-  console.log("Im just to prove it's working!");
-  pennies = pennies * 2;
-  output.innerText = (`${pennies} pennies`)
+//Task 7
+function getInput (e) {
+document.querySelector('h1').innerText = e.target.value;
 }
+
+let userInput = document.querySelector('#input-box');
+userInput.addEventListener ('change', getInput);
